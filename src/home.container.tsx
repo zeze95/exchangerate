@@ -1,5 +1,5 @@
 import HomePageUI from "./home.presenter";
-import { useEffect, useState, ChangeEvent } from "react";
+import { useEffect, useState } from "react";
 
 export default function HomePage() {
   const [fromCountry, setFromCountry] = useState<string>("KRW");
@@ -15,7 +15,6 @@ export default function HomePage() {
 
   useEffect(() => {
     onChangeResult();
-    // 별도 이벤트에서 받아오는 것이 아니라 유즈 이펙트로 계속 렌더링
   });
   const onChangeResult = () => {
     const requestURL = `https://api.exchangerate.host/convert?from=${fromCountry}&to=${toCountry}`;
