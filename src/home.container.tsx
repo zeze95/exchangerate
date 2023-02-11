@@ -26,8 +26,6 @@ export default function HomePage() {
     request.addEventListener("load", (res: any) => {
       setToMoney(res.target.response.result);
     });
-    // 버튼으로 변경할 것이라면 위까지는 계속 렌더링 되도록 따로 변수에 선언하고
-    // 클릭 이벤트로는 하단 계산을 하는 것을 받음
     const changeMoney = Number(toMoney * fromMoney);
     setMyResult(changeMoney);
   };
